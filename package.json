@@ -1,12 +1,66 @@
 {
   "name": "webpage-report-tool",
   "version": "1.0.0",
-  "description": "",
+  "description": "The tool crawls through the webpages and generates a mobile performance, SEO, accessibility and best practices report.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release": "semantic-release",
+    "generate": "node ./src/index.js",
+    "serve": "live-server ./reports --port process.env.port || 8099"
   },
-  "keywords": [],
+  "dependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "async": "^3.1.0",
+    "datatables.net": "^1.10.19",
+    "debug": "^4.1.1",
+    "eslint": "^6.3.0",
+    "husky": "^4.2.5",
+    "lighthouse": "^5.6.0",
+    "live-server": "^1.2.1",
+    "merge-deep": "^3.0.2",
+    "minimist": "^1.2.0",
+    "node-fetch": "^2.6.0",
+    "puppeteer": "^1.19.0",
+    "semantic-release": "^17.0.7"
+  },
+  "devDependencies": {
+    "docco": "^0.8.0",
+    "pending-xhr-puppeteer": "^2.1.0",
+    "socks": "^2.3.2"
+  },
   "author": "Prasanna Jathan <prasannajathan@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "performance",
+    "performance-metrics",
+    "performance-analysis",
+    "best-practices",
+    "report",
+    "lighthouse",
+    "tool",
+    "audit",
+    "web",
+    "puppeteer"
+  ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E  HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "subject-case": [
+        2,
+        "never",
+        [
+          "start-case",
+          "pascal-case"
+        ]
+      ]
+    }
+  }
 }
