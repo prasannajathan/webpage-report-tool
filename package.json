@@ -22,7 +22,7 @@
     "minimist": "^1.2.0",
     "node-fetch": "^2.6.0",
     "puppeteer": "^1.19.0",
-    "semantic-release": "^17.0.7"
+    "semantic-release": "^17.2.3"
   },
   "devDependencies": {
     "docco": "^0.8.0",
