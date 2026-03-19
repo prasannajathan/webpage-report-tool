@@ -20,7 +20,7 @@
     "live-server": "^1.2.1",
     "merge-deep": "^3.0.2",
     "minimist": "^1.2.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "puppeteer": "^1.19.0",
     "semantic-release": "^17.0.7"
   },
