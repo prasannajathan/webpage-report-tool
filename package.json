@@ -9,7 +9,7 @@
     "serve": "live-server ./reports --port process.env.port || 8099"
   },
   "dependencies": {
-    "@commitlint/cli": "^8.3.5",
+    "@commitlint/cli": "^20.5.0",
     "@commitlint/config-conventional": "^8.3.4",
     "async": "^3.1.0",
     "datatables.net": "^1.10.19",
